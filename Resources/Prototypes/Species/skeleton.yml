@@ -12,7 +12,10 @@
   name: species-name-skeleton
   roundStart: false
   prototype: MobSkeletonPerson
-  sprites: MobSkeletonSprites
+  # WD EDIT START
+  bodyTypes:
+    - SkeletonNormal
+  # WD EDIT END
   defaultSkinTone: "#fff9e2"
   markingLimits: MobHumanMarkingLimits
   maleFirstNames: NamesSkeletonFirst
@@ -20,8 +23,11 @@
   dollPrototype: MobSkeletonPersonDummy
   skinColoration: TintedHues
 
-- type: speciesBaseSprites
-  id: MobSkeletonSprites
+# WD EDIT START
+- type: bodyType
+  id: SkeletonNormal
+  name: body-normal
+# WD EDIT END
   sprites:
     Head: MobSkeletonHead
     Chest: MobSkeletonChest

@@ -1245,6 +1245,13 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("banning_admin");
 
+                    // WD EDIT START
+                    b.Property<string>("BodyType")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("body_type");
+                    // WD EDIT END
+
                     b.Property<int>("ExemptFlags")
                         .HasColumnType("INTEGER")
                         .HasColumnName("exempt_flags");

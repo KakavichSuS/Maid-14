@@ -263,6 +263,7 @@ public abstract class ClothingSystem : EntitySystem
         clothing.ClothingVisuals = otherClothing.ClothingVisuals;
         clothing.EquippedPrefix = otherClothing.EquippedPrefix;
         clothing.RsiPath = otherClothing.RsiPath;
+        clothing.ClothingType = otherClothing.ClothingType; // WD EDIT
 
         _itemSys.VisualsChanged(uid);
         Dirty(uid, clothing);

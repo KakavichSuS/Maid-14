@@ -31,8 +31,7 @@
 using System.IO;
 using System.Linq;
 using System.Numerics;
-using Content.Shared.CCVar;
-using Content.Shared.Decals;
+using Content.Shared._White.Humanoid.Prototypes;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared._Shitmed.Humanoid.Events; // Shitmed Change
@@ -76,6 +75,11 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [Dependency] private readonly SharedIdentitySystem _identity = default!;
 
     public static readonly ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
+
+    // WD EDIT START
+    [ValidatePrototypeId<BodyTypePrototype>]
+    public const string DefaultBodyType = "HumanNormal";
+    // WD EDIT END
 
     //Maid edit start
     public const string DefaultVoice = "Xrenoid";
@@ -204,6 +208,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         targetHumanoid.SkinColor = sourceHumanoid.SkinColor;
         targetHumanoid.EyeColor = sourceHumanoid.EyeColor;
         targetHumanoid.Age = sourceHumanoid.Age;
+        targetHumanoid.BodyType = sourceHumanoid.BodyType; // WD EDIT
         targetHumanoid.Height = sourceHumanoid.Height; // Goobstation: port EE height/width sliders
         targetHumanoid.Width = sourceHumanoid.Width; // Goobstation: port EE height/width sliders
         SetSex(target, sourceHumanoid.Sex, false, targetHumanoid);
@@ -416,6 +421,34 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
     }
 
+    // WD EDIT START
+    /// <summary>
+    ///     Set a humanoid mob's body tupe. This will change their base sprites.
+    /// </summary>
+    /// <param name="uid">The humanoid mob's UID.</param>
+    /// <param name="bodyType">The body type to set the mob to. Will return if the body type prototype was invalid.</param>
+    /// <param name="sync">Whether to immediately synchronize this to the humanoid mob, or not.</param>
+    /// <param name="humanoid">Humanoid component of the entity</param>
+    public void SetBodyType(
+        EntityUid uid,
+        ProtoId<BodyTypePrototype> bodyType,
+        bool sync = true,
+        HumanoidAppearanceComponent? humanoid = null)
+    {
+        if (!Resolve(uid, ref humanoid))
+            return;
+
+        var speciesPrototype = _proto.Index<SpeciesPrototype>(humanoid.Species);
+        if (speciesPrototype.BodyTypes.Contains(bodyType))
+            humanoid.BodyType = bodyType;
+        else
+            humanoid.BodyType = speciesPrototype.BodyTypes.First();
+
+        if (sync)
+            Dirty(uid, humanoid);
+    }
+    // WD EDIT END
+
     //Maid edit start
     /// <summary>
     ///     Set a humanoid mob's voice type.
@@ -524,6 +557,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         SetSpecies(uid, profile.Species, false, humanoid);
         SetSex(uid, profile.Sex, false, humanoid);
         SetTTSVoice(uid, profile.Voice, false, humanoid); //Maid edit
+        SetBodyType(uid, profile.BodyType, false, humanoid); // WD EDIT
         humanoid.EyeColor = profile.Appearance.EyeColor;
 
         SetSkinColor(uid, profile.Appearance.SkinColor, false);

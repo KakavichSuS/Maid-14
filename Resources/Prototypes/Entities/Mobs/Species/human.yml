@@ -150,9 +150,41 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+      # WD EDIT START
+      jumpsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: jumpsuit
+      shoes-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: shoes
+      gloves-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: gloves
+      outerClothing-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: outer
+      hardsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: hardsuit
+      suit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: suit
+      # WD EDIT END
+>>>>>>> 2549ec061e ([Feature] Body Types (#180))
 #  - type: Sprinter # Goob Change: human major # Maid true -> false
 #    staminaDrainRate: 8
-
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -166,3 +198,35 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+      # WD EDIT START
+      jumpsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: jumpsuit
+      shoes-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: shoes
+      gloves-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: gloves
+      outerClothing-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: outer
+      hardsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: hardsuit
+      suit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: suit
+      # WD EDIT END

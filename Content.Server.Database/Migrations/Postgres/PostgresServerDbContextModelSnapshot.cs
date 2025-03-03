@@ -1310,6 +1310,13 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("uuid")
                         .HasColumnName("banning_admin");
 
+                    // WD EDIT START
+                    b.Property<string>("BodyType")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("body_type");
+                    // WD EDIT END
+
                     b.Property<int>("ExemptFlags")
                         .HasColumnType("integer")
                         .HasColumnName("exempt_flags");
