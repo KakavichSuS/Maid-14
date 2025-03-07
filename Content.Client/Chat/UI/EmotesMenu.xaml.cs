@@ -28,6 +28,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Numerics;
+using Content.Client._White.UI.Emotes;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Chat.Prototypes;
 using Content.Shared.Speech;
@@ -42,7 +43,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Client.Chat.UI;
 
 [GenerateTypedNameReferences]
-public sealed partial class EmotesMenu : RadialMenu
+public sealed partial class EmotesMenu : RadialMenu, IBaseEmoteMenu // WD EDIT
 {
     [Dependency] private readonly EntityManager _entManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;

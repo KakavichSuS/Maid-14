@@ -8,3 +8,7 @@ ui-options-log-in-chat = Log actions in the chat
 ui-options-hud-theme-xenomorph = Xenomorph
 
 ui-options-function-auto-get-up = Automatically get up after falling
+
+ui-options-emotes-menu = Emotes menu type:
+
+ui-options-function-open-emotions-menu = Open emotions menu
