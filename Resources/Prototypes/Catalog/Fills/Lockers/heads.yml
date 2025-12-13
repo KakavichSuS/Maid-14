@@ -217,7 +217,6 @@
     - id: ClothingUniformJumpsuitCaptain
     # - id: ClothingEyesGlassesCommand
     # - id: HeadSkeleton # A skull to accompany your skeleton crew
-#    - id: SecondSkinSecurity # Goobstation
 #      conditions:
 #      - !type:PlayerCountCondition
 #        max: 15 #Maid edit end
@@ -568,8 +567,7 @@
     # - id: ComputerCargoRequestSecurityFlatpack # Goobstation
     # - id: WantedListCartridge # Maid
     # - id: DrinkHosFlask # Maid
-    # - id: ClothingBeltSheathHeadOfSecurityFilled # Goobstation - security revamp
-#    - id: SecondSkinSecurity # Goobstation #Maid edit end
+    # - id: ClothingBeltSheathHeadOfSecurityFilled # Goobstation - security revamp#Maid edit end
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable

@@ -63,7 +63,6 @@
     - id: BlueshieldUndeterminedWeapon
     - id: BlueshieldUndeterminedHardsuit
     - id: FlashlightSeclite
-#    - id: SecondSkinSecurity
 
 - type: entity
   id: LockerBlueshieldOfficerFilled
