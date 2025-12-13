@@ -155,6 +155,11 @@
   supervisors: job-supervisors-captain
   canBeAntag: true # Maid
   antagAdvantage: 75 # Goobstation
+  guides: # goobstation
+  - Science
+  - Command
+  - ResearchDirector SOP
+  - Science SOP
   access:
   - Research
   - Command

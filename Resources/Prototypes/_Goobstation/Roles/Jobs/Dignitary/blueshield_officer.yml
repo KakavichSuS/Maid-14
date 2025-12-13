@@ -48,6 +48,10 @@
 #      inverted: true
 #      species:
 #      - Felinid
+  guides:
+  - BlueshieldOfficer SOP
+  - Command
+  - Succession
   weight: 20
   startingGear: BlueshieldOfficerGear
   icon: "JobIconBlueshield"

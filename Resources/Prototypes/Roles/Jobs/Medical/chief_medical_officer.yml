@@ -154,6 +154,12 @@
   icon: "JobIconChiefMedicalOfficer"
   supervisors: job-supervisors-captain
   canBeAntag: true # Maid
+  guides: # goobstation
+  - Medical
+  - ChiefMedicalOfficer SOP
+  - Medical SOP
+  - Command
+  - Chemicals
   weight: 10 #Goob Edit
   access:
   - Medical
