@@ -122,17 +122,6 @@ public sealed partial class ClothingComponent : Component
     // WD EDIT END
 }
 
-[Serializable, NetSerializable]
-public sealed class ClothingComponentState : ComponentState
-{
-    public string? EquippedPrefix;
-
-    public ClothingComponentState(string? equippedPrefix)
-    {
-        EquippedPrefix = equippedPrefix;
-    }
-}
-
 public enum ClothingMask : byte
 {
     NoMask = 0,
