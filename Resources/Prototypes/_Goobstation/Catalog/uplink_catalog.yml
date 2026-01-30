@@ -1620,3 +1620,19 @@
     Telecrystal: 50 # Same price as what Antimov was. Might be worth increasing the price for nukies as they can do some BAD things with this.
   categories:
   - UplinkDisruption
+
+- type: listing
+  id: UplinkBoxXenobio
+  name: uplink-box-xenobio-name
+  description: uplink-box-xenobio-desc
+  icon: { sprite: _Goobstation/Objects/Misc/syndiecubes.rsi, state: box }
+  productEntity: SlimeCubeBoxSyndie
+  cost:
+    Telecrystal: 250
+  categories:
+  - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink

@@ -358,3 +358,6 @@ uplink-syndiedrobe-desc = A vending machine stocked with Syndicate-branded cloth
 
 uplink-customboard-name = Custom Syndicate Lawboard
 uplink-customboard-desc = A modified lawboard that allows the user to change the laws to anything they want. Comes with Antimov pre-installed.
+
+uplink-box-xenobio-name = Xenobiology slimes box
+uplink-box-xenobio-desc = Slimes for your xenobiology needs. Contains 9 random T1 slimes.
