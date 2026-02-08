@@ -258,6 +258,7 @@
     # - id: BloodTrak # Goobstation
     #      - id: Betty # Goobstation # Maid - ne rabotaet huinya
     - id: BoxTapeRecorder # DeltaV
+    - id: PoliceBaton # Goobstation
 
 - type: entity
   id: ClosetBombFilled
