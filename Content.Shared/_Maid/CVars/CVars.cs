@@ -53,5 +53,11 @@ public sealed class MaidCVars
     public static readonly CVarDef<bool> HeightSliders =
         CVarDef.Create("maid.height_sliders_enabled", false, CVar.SERVER | CVar.REPLICATED);
 
+    /// <summary>
+    ///     Do generate Ert map on round start or not
+    /// </summary>
+    public static readonly CVarDef<bool> LoadErtMap =
+        CVarDef.Create("maid.load_ert_map", true, CVar.SERVERONLY);
+
     #endregion
 }

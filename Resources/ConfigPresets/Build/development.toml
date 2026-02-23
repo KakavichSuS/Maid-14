@@ -63,3 +63,6 @@ ascension_requires_objectives = false
 random_characters = false
 random_species_weights = ""
 ssd_sleep_time = 3600
+
+[maid]
+load_ert_map = false
