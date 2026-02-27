@@ -8,6 +8,10 @@
     },
     "states": [
         {
+            "name": "full_slim_f",
+            "directions": 4
+        },
+        {
             "name": "head_slim",
             "directions": 4
         },
