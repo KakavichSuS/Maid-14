@@ -106,11 +106,8 @@ public sealed class ERTRecruitmentRule : StationEventSystem<ERTRecruitmentRuleCo
         base.Ended(uid, component, gameRule, args);
         var ertsys = _entities.System<ERTRecruitmentRule>();
 
-        var check1 = component.IsBlocked || ertsys.IsDisabled;
 
-        var check2 = _recruitment.GetAllRecruited(ERTRecruitmentRuleComponent.EventName).Count() < component.MinPlayers;
-
-        if (check1)
+        if (component.IsBlocked || ertsys.IsDisabled)
         {
             if (component.TargetStation != null)
                 DeclineERT(component.TargetStation.Value);
@@ -118,7 +115,7 @@ public sealed class ERTRecruitmentRule : StationEventSystem<ERTRecruitmentRuleCo
             _recruitment.Cleanup(ERTRecruitmentRuleComponent.EventName);
             return;
         }
-        if (check2)
+        if (_recruitment.GetAllRecruited(ERTRecruitmentRuleComponent.EventName).Count() < component.MinPlayers)
         {
             if (component.TargetStation != null)
                 DeclineERT(component.TargetStation.Value);
@@ -204,6 +201,12 @@ public sealed class ERTRecruitmentRule : StationEventSystem<ERTRecruitmentRuleCo
 
         var ertMap = EnsureComp<ERTMapComponent>(outpost);
         ertMap.MapId = map?.Comp?.MapId;
+
+        var id = map?.Comp?.MapId;
+        if (id is not null)
+        {
+            _mapSystem.InitializeMap((MapId) id);
+        }
         // ERTMap.Shuttle = shuttleId;
 
         return outpost.Owner;
