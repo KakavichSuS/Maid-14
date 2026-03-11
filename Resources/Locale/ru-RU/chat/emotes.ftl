@@ -31,7 +31,7 @@ chat-emote-name-beep = Бип
 chat-emote-name-chime = Звон
 chat-emote-name-buzztwo = Бип-Буп
 chat-emote-name-ping = Пинг
-chat-emote-name-robotbeep = Robot
+chat-emote-name-robotbeep = Робот
 # Shadowkin
 chat-emote-name-mars = Марс
 chat-emote-name-wurble = Воркотание

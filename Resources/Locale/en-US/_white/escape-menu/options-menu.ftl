@@ -12,3 +12,7 @@ ui-options-function-auto-get-up = Automatically get up after falling
 ui-options-emotes-menu = Emotes menu type:
 
 ui-options-function-open-emotions-menu = Open emotions menu
+
+ui-options-emotes-menu-style-window = Window
+
+ui-options-emotes-menu-style-radial = Radial

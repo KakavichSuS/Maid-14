@@ -7,10 +7,10 @@ chat-emote-name-catpurr = Purr
 
 # Message
 chat-emote-msg-hisses = hisses!
-chat-emote-msg-meow = meow.
-chat-emote-msg-mew = mew.
-chat-emote-msg-growl = growl!
-chat-emote-msg-purr = purr.
+chat-emote-msg-meow = meows.
+chat-emote-msg-mew = mews.
+chat-emote-msg-growl = growls!
+chat-emote-msg-purr = purrs.
 
 # Triggers
 chat-emote-trigger-hisses-1 = hisses
