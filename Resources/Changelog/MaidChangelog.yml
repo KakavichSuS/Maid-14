@@ -431,3 +431,11 @@ Entries:
       message: Худощавое телосложение.
   id: 35
   time: '2026-03-14T05:47:36.0000000+00:00'
+- author: Warete
+  changes:
+    - type: Add
+      message: 'Карта под игры - TVR '
+    - type: Tweak
+      message: Правки Wonderbox'a - pahan_chiiiil
+  id: 36
+  time: '2026-03-16T18:25:54.0000000+00:00'
