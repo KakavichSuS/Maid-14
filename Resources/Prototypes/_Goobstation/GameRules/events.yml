@@ -32,10 +32,10 @@
   - type: GameRule
     chaosScore: 150
   - type: StationEvent
-    weight: 4.5 # Uncommon
-    earliestStart: 30
-    reoccurrenceDelay: 30
-    minimumPlayers: 4
+    weight: 1 # Uncommon # Maid 4.5 -> 1
+    earliestStart: 45
+    reoccurrenceDelay: 45
+    minimumPlayers: 15
     duration: null
   - type: SpaceSpawnRule
     spawnDistance: 0
