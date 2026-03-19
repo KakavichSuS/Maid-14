@@ -127,6 +127,8 @@
         - map: ["enum.HumanoidVisualLayers.LArm"]
         - map: ["enum.HumanoidVisualLayers.RLeg"]
         - map: ["enum.HumanoidVisualLayers.LLeg"]
+        - map: [ "underwearb" ] # Maid
+        - map: [ "underweart" ] # Maid
         - shader: StencilClear
           sprite: Mobs/Species/Human/parts.rsi
           state: l_leg
@@ -137,7 +139,7 @@
           visible: false
         - map: ["enum.HumanoidVisualLayers.LFoot"]
         - map: ["enum.HumanoidVisualLayers.RFoot"]
-        - map: ["socks"]
+        - map: ["socks"] # Maid
         - map: ["underpants"]
         - map: ["undershirt"]
         - map: ["jumpsuit"]
