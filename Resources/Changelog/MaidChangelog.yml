@@ -447,3 +447,21 @@ Entries:
         в настройках
   id: 37
   time: '2026-03-18T08:40:50.0000000+00:00'
+- author: Warete
+  changes:
+    - type: Remove
+      message: 'В меру неинтересные игровые ивенты '
+    - type: Remove
+      message: Мыши более не мышифицируют
+    - type: Tweak
+      message: Платы Дюранда и Гигакса теперь на месте
+    - type: Tweak
+      message: Некоторые Аномалии стали более редкими
+    - type: Tweak
+      message: Хонкопс от 20-ти игроков
+    - type: Tweak
+      message: Скорострельность Дрозда
+    - type: Fix
+      message: Слои на IPC
+  id: 38
+  time: '2026-03-19T17:48:17.0000000+00:00'
