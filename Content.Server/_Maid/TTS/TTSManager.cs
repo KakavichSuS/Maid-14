@@ -90,6 +90,7 @@ public sealed class TTSManager
 
         _sawmill.Verbose($"Generate new audio for '{text}' speech by '{speaker}' speaker");
 
+        var validatedEffect = TtsEffects.IsValid(effect) ? effect : null;
         var reqTime = DateTime.UtcNow;
         try
         {
@@ -100,7 +101,7 @@ public sealed class TTSManager
             queryParams["speaker"] = speaker;
             queryParams["text"] = text;
             queryParams["ext"] = "ogg";
-            queryParams["effect"] = effect;
+            queryParams["effect"] = validatedEffect;
 
             var url = $"{_apiUrl}?{queryParams}";
 

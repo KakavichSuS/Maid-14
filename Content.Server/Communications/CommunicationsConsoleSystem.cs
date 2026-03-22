@@ -329,7 +329,7 @@ namespace Content.Server.Communications
 
             _chatSystem.DispatchStationAnnouncement(uid, msg, title, colorOverride: comp.Color);
 
-            if (TryComp<TTSComponent>(message.Actor, out var ttsComponent))
+            if (TryComp<TTSComponent>(message.Actor, out var ttsComponent)) // Maid
             {
                 var ttsEv = new TTSAnnouncementEvent(message.Message, ttsComponent.VoicePrototypeId, uid, comp.Global);
                 RaiseLocalEvent(ttsEv);
