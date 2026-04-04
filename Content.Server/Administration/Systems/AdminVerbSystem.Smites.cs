@@ -106,6 +106,7 @@
 
 using System.Threading;
 using Content.Goobstation.Common.Speech;
+using Content.Server._Maid;
 using Content.Server.Administration.Commands;
 using Content.Server.Administration.Components;
 using Content.Server.Atmos.Components;
@@ -191,6 +192,7 @@ public sealed partial class AdminVerbSystem
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
     [Dependency] private readonly SuperBonkSystem _superBonkSystem = default!;
     [Dependency] private readonly SlipperySystem _slipperySystem = default!;
+    [Dependency] private readonly HateEngine _hateEngine = default!;
 
     // All smite verbs have names so invokeverb works.
     private void AddSmiteVerbs(GetVerbsEvent<Verb> args)
@@ -964,6 +966,25 @@ public sealed partial class AdminVerbSystem
             Message = string.Join(": ", superSpeedName, Loc.GetString("admin-smite-super-speed-description"))
         };
         args.Verbs.Add(superSpeed);
+
+        var thomasiscoming = Loc.GetString("thomas").ToLowerInvariant();
+        Verb thomasCall = new()
+        {
+            Text = thomasiscoming,
+            Category = VerbCategory.Smite,
+            Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/AdminActions/super_speed.png")),
+            Act = () =>
+            {
+                EnsureComp<HateEngineTargetComponent>(args.Target);
+                EnsureComp<AdminFrozenComponent>(args.Target);
+                _hateEngine.OnHateEngineCall(args.Target);
+                _popupSystem.PopupEntity(Loc.GetString("ChuhChuh"), args.Target,
+                    args.Target, PopupType.LargeCaution);
+            },
+            Impact = LogImpact.Extreme,
+            Message = string.Join(": ", superSpeedName, Loc.GetString("thomas"))
+        };
+        args.Verbs.Add(thomasCall);
 
 
         // Goob edit - Stop shitmins from killing the server
