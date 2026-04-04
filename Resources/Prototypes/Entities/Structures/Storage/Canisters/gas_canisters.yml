@@ -244,7 +244,6 @@
   name: air canister
   description: A canister that can contain any type of gas. This one is supposed to contain air mixture. It can be attached to connector ports using a wrench.
   components:
-  - type: Visibility
   - type: Sprite
     layers:
       - state: grey
@@ -278,7 +277,6 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
       - !type:DumpCanisterBehavior
-  - type: HateEngine
 
 - type: entity
   parent: GasCanister
