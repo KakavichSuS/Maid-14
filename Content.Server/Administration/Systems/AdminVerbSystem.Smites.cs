@@ -967,25 +967,28 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(superSpeed);
 
-        var thomasiscoming = Loc.GetString("thomas").ToLowerInvariant();
-        Verb thomasCall = new()
+        // Maid
+        if (TryComp<BodyComponent>(args.Target, out var comp))
         {
-            Text = thomasiscoming,
-            Category = VerbCategory.Smite,
-            Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/AdminActions/super_speed.png")),
-            Act = () =>
+            var thomasiscoming = Loc.GetString("admin-smite-thomas-name").ToLowerInvariant();
+            Verb thomasCall = new()
             {
-                EnsureComp<HateEngineTargetComponent>(args.Target);
-                EnsureComp<AdminFrozenComponent>(args.Target);
-                _hateEngine.OnHateEngineCall(args.Target);
-                _popupSystem.PopupEntity(Loc.GetString("ChuhChuh"), args.Target,
-                    args.Target, PopupType.LargeCaution);
-            },
-            Impact = LogImpact.Extreme,
-            Message = string.Join(": ", superSpeedName, Loc.GetString("thomas"))
-        };
-        args.Verbs.Add(thomasCall);
-
+                Text = thomasiscoming,
+                Category = VerbCategory.Smite,
+                Icon = new SpriteSpecifier.Texture(new("/Textures/_Maid/Interface/Smite/thomas.png")),
+                Act = () =>
+                {
+                    EnsureComp<HateEngineTargetComponent>(args.Target);
+                    EnsureComp<AdminFrozenComponent>(args.Target);
+                    _hateEngine.OnHateEngineCall(args.Target);
+                    _popupSystem.PopupEntity(Loc.GetString("admin-smite-thomas-prompt"), args.Target,
+                        args.Target, PopupType.LargeCaution);
+                },
+                Impact = LogImpact.Extreme,
+                Message = string.Join(": ", thomasiscoming, Loc.GetString("admin-smite-thomas-description"))
+            };
+            args.Verbs.Add(thomasCall);
+        }
 
         // Goob edit - Stop shitmins from killing the server
         if (_adminManager.HasAdminFlag(args.User, AdminFlags.Host))

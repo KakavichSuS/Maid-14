@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "license": "",
+    "copyright": "",
+    "size": {
+        "x": 486,
+        "y": 423
+    },
+    "states": [
+        {
+            "name": "thomas",
+            "directions": 8
+        }
+    ]
+}
