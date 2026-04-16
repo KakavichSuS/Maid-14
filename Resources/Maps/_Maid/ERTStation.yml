@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/27/2026 12:27:34
-  entityCount: 6936
+  time: 04/16/2026 15:05:57
+  entityCount: 6937
 maps:
 - 1
 grids:
@@ -3244,7 +3244,8 @@ entities:
           4,7:
             0: 65535
           5,4:
-            0: 65535
+            0: 65533
+            4: 2
           5,5:
             0: 65535
           5,6:
@@ -7045,6 +7046,28 @@ entities:
     - type: Transform
       pos: 21.5,16.5
       parent: 2
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 385
     components:
     - type: Transform
@@ -34895,7 +34918,6 @@ entities:
           - 2508
           - 2514
           - 2513
-          - invalid
           - 2509
           - 2511
           - 2510
@@ -34943,7 +34965,6 @@ entities:
           - 2517
           - 2521
           - 2522
-          - invalid
           - 2516
           - 2518
           - 2519
@@ -34988,7 +35009,6 @@ entities:
           ents:
           - 2530
           - 2529
-          - invalid
           - 2525
           - 2524
           - 2526
@@ -35039,7 +35059,6 @@ entities:
           - 2534
           - 2535
           - 2536
-          - invalid
           - 2533
         paper_label: !type:ContainerSlot
           showEnts: False
@@ -39586,37 +39605,42 @@ entities:
     - type: Transform
       pos: 43.5,73.5
       parent: 2
-- proto: SpawnPointERTEngineer
+- proto: SpawnPointERTEventERTEngineer
+  entities:
+  - uid: 6937
+    components:
+    - type: Transform
+      pos: 22.5,15.5
+      parent: 2
+- proto: SpawnPointERTEventERTJanitor
   entities:
   - uid: 6472
     components:
     - type: Transform
-      pos: 23.5,15.5
-      parent: 2
-- proto: SpawnPointERTJanitor
-  entities:
-  - uid: 6475
-    components:
-    - type: Transform
       pos: 54.5,32.5
       parent: 2
-- proto: SpawnPointERTLeader
+- proto: SpawnPointERTEventERTLeader
   entities:
   - uid: 6473
     components:
     - type: Transform
       pos: 43.5,75.5
       parent: 2
-- proto: SpawnPointERTMedical
+- proto: SpawnPointERTEventERTMedical
   entities:
-  - uid: 6471
+  - uid: 6474
     components:
     - type: Transform
       pos: 4.5,27.5
       parent: 2
-- proto: SpawnPointERTSecurity
+- proto: SpawnPointERTEventERTSecurity
   entities:
-  - uid: 6474
+  - uid: 6471
+    components:
+    - type: Transform
+      pos: 34.5,26.5
+      parent: 2
+  - uid: 6475
     components:
     - type: Transform
       pos: 46.5,32.5
@@ -47084,6 +47108,14 @@ entities:
     - type: Transform
       pos: 23.5,17.5
       parent: 2
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
+    - type: Door
+      secondsUntilStateChange: -286.57834
+      state: Opening
+    - type: Airlock
+      autoClose: False
   - uid: 6413
     components:
     - type: Transform
