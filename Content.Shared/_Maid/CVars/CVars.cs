@@ -53,5 +53,11 @@ public sealed class MaidCVars
     public static readonly CVarDef<bool> HeightSliders =
         CVarDef.Create("maid.height_sliders_enabled", false, CVar.SERVER | CVar.REPLICATED);
 
+    /// <summary>
+    ///     Should players get a random weapon on roundend
+    /// </summary>
+    public static readonly CVarDef<bool> RoundEndWeapons =
+        CVarDef.Create("maid.round_end_weapons_enabled", true, CVar.SERVERONLY);
+
     #endregion
 }
