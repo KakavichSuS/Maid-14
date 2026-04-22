@@ -2,7 +2,7 @@ ent-AuthPanel = Authorization Panel
     .desc = If something goes wrong...
 
 ert-description = As a member of the Emergency Response Team,
-    belonging to NanoTrisen, you are tasked with deploying to a distressed station
+    belonging to NanoTrasen, you are tasked with deploying to a distressed station
     and restoring it to operational condition. It is impossible to know exactly
     what you will encounter on your mission — good luck,
     you will need it. You answer directly only to Central Command.
