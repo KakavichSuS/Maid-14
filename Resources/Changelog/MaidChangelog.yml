@@ -509,3 +509,9 @@ Entries:
       message: Старые версии карт
   id: 45
   time: '2026-04-23T12:10:23.0000000+00:00'
+- author: Warete
+  changes:
+    - type: Add
+      message: Карта - Triumph
+  id: 46
+  time: '2026-04-23T15:55:53.0000000+00:00'
