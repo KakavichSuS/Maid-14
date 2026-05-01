@@ -104,7 +104,7 @@
   - GygaxLLeg
   - GygaxRArm
   - GygaxRLeg
-#  - GygaxCentralElectronics
+  - GygaxCentralElectronics # MAID fix: gygax board
   - GygaxPeripheralsElectronics
   - GygaxTargetingElectronics
   - WeaponMechCombatUltraRifle
@@ -201,7 +201,7 @@
   - DurandLLeg
   - DurandRArm
   - DurandRLeg
-#  - DurandCentralElectronics
+  - DurandCentralElectronics # MAID fix: gygax board
   - DurandPeripheralsElectronics
   - DurandTargetingElectronics
   - WeaponMechCombatShotgun
