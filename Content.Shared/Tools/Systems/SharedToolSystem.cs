@@ -121,7 +121,9 @@ public abstract partial class SharedToolSystem : EntitySystem
         InitializeTile();
         InitializeWelder();
         SubscribeLocalEvent<ToolComponent, ToolDoAfterEvent>(OnDoAfter);
+        /* MAID rem: no tool qualifier
         SubscribeLocalEvent<ToolComponent, ExaminedEvent>(OnExamine);
+        */
     }
 
     private void OnDoAfter(EntityUid uid, ToolComponent tool, ToolDoAfterEvent args)
@@ -141,6 +143,7 @@ public abstract partial class SharedToolSystem : EntitySystem
             _delay.TryResetDelay((uid, delay));
     }
 
+    /* MAID BEGIN rem: no tool qualifier
     private void OnExamine(Entity<ToolComponent> ent, ref ExaminedEvent args)
     {
         // If the tool has no qualities, exit early
@@ -168,6 +171,7 @@ public abstract partial class SharedToolSystem : EntitySystem
         message.AddMarkupPermissive(Loc.GetString("tool-component-qualities", ("qualities", qualitiesString)));
         args.PushMessage(message);
     }
+    MAID END */
 
     public void PlayToolSound(EntityUid uid, ToolComponent tool, EntityUid? user)
     {
