@@ -166,7 +166,6 @@ public sealed class ExaminableCharacterSystem : EntitySystem
                 FormattedMessage message = new();
                 message.PushTag(new MarkupNode("fancyborder", null, null));
                 message.PushNewline();
-                message.Pop();
 
                 var textInfo = new CultureInfo("en-US", false).TextInfo;
 

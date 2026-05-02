@@ -55,7 +55,7 @@ public sealed class MaidCVars
         CVarDef.Create("maid.height_sliders_enabled", false, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
-    ///Controls detailed examine panel style.
+    ///     Controls detailed examine panel style.
     /// </summary>
     public static readonly CVarDef<int> DetailedExamineStyle =
         CVarDef.Create("maid.detailed_examine_style", (int)DetailedExamineType.Fancy, CVar.ARCHIVE | CVar.REPLICATED | CVar.CLIENT);

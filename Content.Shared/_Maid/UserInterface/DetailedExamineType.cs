@@ -3,7 +3,7 @@ using Robust.Shared.Serialization;
 namespace Content.Shared._Maid.UserInterface;
 
 [Serializable, NetSerializable]
-public enum  DetailedExamineType
+public enum DetailedExamineType
 {
     None,
     Legacy,
