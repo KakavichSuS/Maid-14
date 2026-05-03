@@ -217,8 +217,8 @@
       collection: CatMeows # Goobstation - effect standardization
     Gasp:
       collection: MaleGasp
-    DefaultDeathgasp:
-      collection: DeathGasp
+#    DefaultDeathgasp: # MAID feat no deathgasps
+#      collection: DeathGasp # MAID feat no deathgasps
     # Floof
     Yip:
       collection: Yip
