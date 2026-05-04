@@ -413,7 +413,7 @@ namespace Content.IntegrationTests.Tests
                 // </Goob>
 
                 // <Maid>
-                "LavalandHierophantTelepad" // TODO: Delete after upstream
+                "HierophantFieldGenerator" // TODO: Delete after upstream
                 // </Maid>
             };
 
