@@ -49,6 +49,9 @@ public sealed class PoolTestLogHandler : ILogHandler
 
     public void Log(string sawmillName, LogEvent message)
     {
+        if (message.RenderMessage().Contains("Cannot save the config file, because one was never loaded"))
+            return; // TODO: Delete this after update robusttoolbox
+
         var level = message.Level.ToRobust();
 
         if (ShuttingDown && (FailureLevel == null || level < FailureLevel))

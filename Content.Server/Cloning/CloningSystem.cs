@@ -87,6 +87,7 @@ using Content.Goobstation.Shared.Clothing.Systems;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.EntitySystems;
 using Content.Shared.Interaction.Components;
+using Content.Shared.Mindshield.Components;
 using Content.Shared.Radio.Components; // Goobstation
 using Content.Shared.Radio.EntitySystems;
 using Robust.Shared.Utility; // Goobstation
@@ -441,6 +442,9 @@ public sealed partial class CloningSystem : EntitySystem
         {
             if (!HasComp<SubdermalImplantComponent>(originalImplant))
                 continue; // not an implant (should only happen with admin shenanigans)
+
+            if (HasComp<MindShieldImplantComponent>(originalImplant)) // Maid
+                continue;
 
             var implantId = MetaData(originalImplant).EntityPrototype?.ID;
 

@@ -15,7 +15,10 @@
   name: species-name-tajaran
   roundStart: false # Maid
   prototype: MobTajaran
-  sprites: MobTajaranSprites
+# Maid edit start
+  bodyTypes:
+  - TajaranNormal
+# Maid edit start
   markingLimits: MobTajaranMarkingLimits
   dollPrototype: MobTajaranDummy
   skinColoration: AnimalFur
@@ -88,8 +91,11 @@
       points: 3
       required: false
 
-- type: speciesBaseSprites
-  id: MobTajaranSprites
+# Maid edit start
+- type: bodyType
+  id: TajaranNormal
+  name: body-normal
+# Maid edit end
   sprites:
     Head: MobTajaranHead
     HeadTop: MobHumanoidAnyMarking

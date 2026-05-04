@@ -240,7 +240,9 @@ namespace Content.IntegrationTests.Tests
               "Submarine",
             // Goob end
               "WonderBox", // Maid
-              "Atom" // Maid
+              "Atom", // Maid
+              "TriumphMaid", // Maid
+              "BoxMaid" // Maid
         };
         // Goobstation edit start, yeah i know, but this is easier and less load than loading protoman or something.
         private static readonly string[] GameMapsInCurrentPool = // plus dev
@@ -284,7 +286,9 @@ namespace Content.IntegrationTests.Tests
               "Serpentcrest",
               "Submarine",
               "WonderBox", // Maid
-              "Atom" // Maid
+              "Atom", // Maid
+              "TriumphMaid", // Maid
+              "BoxMaid" // Maid
         };
         // Goobstation edit end
 

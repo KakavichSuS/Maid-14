@@ -9,7 +9,7 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-chat-emote-name-flip = Сделать сальто
+chat-emote-name-flip = Сальто
 chat-emote-name-spin = Крутиться
 chat-emote-name-jump = Прыжок
 chat-emote-name-tweak = Дёргается

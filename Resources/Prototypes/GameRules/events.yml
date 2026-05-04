@@ -158,7 +158,7 @@
     - id: ClericalError
     - id: CockroachMigration
     - id: GasLeak
-    - id: GreytideVirus
+#    - id: GreytideVirus # Maid
     - id: IonStorm # its calm like 90% of the time smh
 #    - id: JobDistributionErrorRule // Slomano nahui // Maid
     - id: KudzuGrowth
@@ -173,7 +173,7 @@
     - id: SpiderClownSpawn
     - id: SpiderSpawn
     - id: VentClog
-    - id: TidemindDevelop # Goobstation - Tidemind
+#    - id: TidemindDevelop # Goobstation - Tidemind
     - id: MothroachSpawn # DeltaV
     - id: DerelictCyborgSyndicateSpawn # Goobstation - usually calm
     - id: MalignRiftSpawn # DeltaV
@@ -246,6 +246,9 @@
     eventType: Chaotic # Goobstation
   # Goobstation
   - type: GameRule
+    delay:
+      min: 20
+      max: 40
     chaosScore: 70
   - type: AnomalySpawnRule
 
@@ -275,8 +278,8 @@
   components:
   - type: StationEvent
     weight: 2
-    reoccurrenceDelay: 5
-    earliestStart: 1
+    reoccurrenceDelay: 15 # Maid 5 - > 15
+    earliestStart: 10 # Maid 1 -> 10
     duration: 1
     chaos: # Goobstation
       Anomaly: 40

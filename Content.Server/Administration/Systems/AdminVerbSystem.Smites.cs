@@ -106,6 +106,7 @@
 
 using System.Threading;
 using Content.Goobstation.Common.Speech;
+using Content.Server._Maid;
 using Content.Server.Administration.Commands;
 using Content.Server.Administration.Components;
 using Content.Server.Atmos.Components;
@@ -191,6 +192,7 @@ public sealed partial class AdminVerbSystem
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
     [Dependency] private readonly SuperBonkSystem _superBonkSystem = default!;
     [Dependency] private readonly SlipperySystem _slipperySystem = default!;
+    [Dependency] private readonly HateEngine _hateEngine = default!;
 
     // All smite verbs have names so invokeverb works.
     private void AddSmiteVerbs(GetVerbsEvent<Verb> args)
@@ -965,6 +967,28 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(superSpeed);
 
+        // Maid
+        if (TryComp<BodyComponent>(args.Target, out var comp))
+        {
+            var thomasiscoming = Loc.GetString("admin-smite-thomas-name").ToLowerInvariant();
+            Verb thomasCall = new()
+            {
+                Text = thomasiscoming,
+                Category = VerbCategory.Smite,
+                Icon = new SpriteSpecifier.Texture(new("/Textures/_Maid/Interface/Smite/thomas.png")),
+                Act = () =>
+                {
+                    EnsureComp<HateEngineTargetComponent>(args.Target);
+                    EnsureComp<AdminFrozenComponent>(args.Target);
+                    _hateEngine.OnHateEngineCall(args.Target);
+                    _popupSystem.PopupEntity(Loc.GetString("admin-smite-thomas-prompt"), args.Target,
+                        args.Target, PopupType.LargeCaution);
+                },
+                Impact = LogImpact.Extreme,
+                Message = string.Join(": ", thomasiscoming, Loc.GetString("admin-smite-thomas-description"))
+            };
+            args.Verbs.Add(thomasCall);
+        }
 
         // Goob edit - Stop shitmins from killing the server
         if (_adminManager.HasAdminFlag(args.User, AdminFlags.Host))

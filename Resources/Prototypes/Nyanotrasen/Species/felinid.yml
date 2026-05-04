@@ -23,7 +23,10 @@
   name: species-name-felinid
   roundStart: true # Maid
   prototype: MobFelinid
-  sprites: MobHumanSprites
+  # WD EDIT START
+  bodyTypes:
+  - HumanNormal
+  # WD EDIT END
   markingLimits: MobFelinidMarkingLimits
   dollPrototype: MobFelinidDummy
   skinColoration: HumanToned

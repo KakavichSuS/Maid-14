@@ -15,3 +15,31 @@
   name: chat-emote-name-deathgasp
   icon: Interface/Emotes/deathgasp.png
   chatMessages: ["chat-emote-msg-deathgasp"]
+
+- type: emote
+  id: Nod
+  name: chat-emote-name-nod
+  chatMessages: [ "chat-emote-msg-nod" ]
+  chatTriggers:
+    - nods
+
+- type: emote
+  id: ShakeHead
+  name: chat-emote-name-shake-head
+  chatMessages: [ "chat-emote-msg-shake-head" ]
+  chatTriggers:
+    - shakes head
+
+- type: emote
+  id: Frown
+  name: chat-emote-name-frown
+  chatMessages: [ "chat-emote-msg-frown" ]
+  chatTriggers:
+    - frowns
+
+- type: emote
+  id: Smile
+  name: chat-emote-name-smile
+  chatMessages: [ "chat-emote-msg-smile" ]
+  chatTriggers:
+    - smiles

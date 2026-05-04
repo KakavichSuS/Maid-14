@@ -36,11 +36,14 @@
     - id: AnomalyGravity
     - id: AnomalyElectricity
     - id: AnomalyFlesh
+      weight: 0.33
     - id: AnomalyBluespace
     - id: AnomalyIce
     - id: RandomRockAnomalySpawner
+      weight: 0.33
     - id: AnomalyLiquid
     - id: AnomalyFlora
+      weight: 0.33
 #    - id: AnomalyShadow # Maid cuz its boring.
     - id: AnomalyTech
     - id: AnomalySanta

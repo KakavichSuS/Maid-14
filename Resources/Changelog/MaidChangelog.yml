@@ -425,3 +425,93 @@ Entries:
         распред. средств с мостика + по мелочи. - pahan_chiiiil.
   id: 34
   time: '2026-02-25T23:16:57.0000000+00:00'
+- author: Spatison, Aviu
+  changes:
+    - type: Add
+      message: Худощавое телосложение.
+  id: 35
+  time: '2026-03-14T05:47:36.0000000+00:00'
+- author: Warete
+  changes:
+    - type: Add
+      message: 'Карта под игры - TVR '
+    - type: Tweak
+      message: Правки Wonderbox'a - pahan_chiiiil
+  id: 36
+  time: '2026-03-16T18:25:54.0000000+00:00'
+- author: HSKveez
+  changes:
+    - type: Add
+      message: >-
+        Квадратное меню эмоций, переключатель радиальное/квадратное можно найти
+        в настройках
+  id: 37
+  time: '2026-03-18T08:40:50.0000000+00:00'
+- author: Warete
+  changes:
+    - type: Remove
+      message: 'В меру неинтересные игровые ивенты '
+    - type: Remove
+      message: Мыши более не мышифицируют
+    - type: Tweak
+      message: Платы Дюранда и Гигакса теперь на месте
+    - type: Tweak
+      message: Некоторые Аномалии стали более редкими
+    - type: Tweak
+      message: Хонкопс от 20-ти игроков
+    - type: Tweak
+      message: Скорострельность Дрозда
+    - type: Fix
+      message: Слои на IPC
+  id: 38
+  time: '2026-03-19T17:48:17.0000000+00:00'
+- author: anonymaidys
+  changes:
+    - type: Tweak
+      message: Декали теперь больше подходят к тайлам.
+    - type: Tweak
+      message: Некоторые тайлы возвращены к образцам 2024 года.
+  id: 39
+  time: '2026-03-23T16:29:11.0000000+00:00'
+- author: Warete
+  changes:
+    - type: Add
+      message: Озвучка объявлений консоли коммуникации с ТТС игрока.
+  id: 40
+  time: '2026-03-23T16:29:45.0000000+00:00'
+- author: HSKveez
+  changes:
+    - type: Fix
+      message: Гарпии больше не ломаются при выборе телосложения
+  id: 41
+  time: '2026-03-24T16:00:51.0000000+00:00'
+- author: Warete
+  changes:
+    - type: Add
+      message: Добавлено веселье c Томасом!
+  id: 42
+  time: '2026-04-13T17:56:58.0000000+00:00'
+- author: Warete
+  changes:
+    - type: Add
+      message: Карта BoxMaid - pahan_chiiiil
+  id: 43
+  time: '2026-04-13T17:56:43.0000000+00:00'
+- author: Aviu
+  changes:
+    - type: Add
+      message: Выдача оружий после манифеста.
+  id: 44
+  time: '2026-04-16T15:39:03.0000000+00:00'
+- author: Warete
+  changes:
+    - type: Remove
+      message: Старые версии карт
+  id: 45
+  time: '2026-04-23T12:10:23.0000000+00:00'
+- author: Warete
+  changes:
+    - type: Add
+      message: Карта - Triumph
+  id: 46
+  time: '2026-04-23T15:55:53.0000000+00:00'

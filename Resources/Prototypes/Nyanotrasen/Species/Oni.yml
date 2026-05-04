@@ -22,7 +22,10 @@
   prototype: MobOni
   dollPrototype: MobOniDummy
   markingLimits: MobOniMarkingLimits
-  sprites: MobHumanSprites
+  # WD EDIT START
+  bodyTypes:
+  - HumanNormal
+  # WD EDIT END
   skinColoration: Hues
   maleFirstNames: NamesOniFirstMale
   femaleFirstNames: NamesOniFirstFemale

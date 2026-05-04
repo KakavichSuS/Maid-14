@@ -403,6 +403,7 @@ namespace Content.Server.Database
                 profile.Age,
                 sex,
                 voice, //Maid edit
+                profile.BodyType, // WD EDIT
                 gender,
                 new HumanoidCharacterAppearance
                 (
@@ -442,6 +443,7 @@ namespace Content.Server.Database
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
             profile.Voice = humanoid.Voice; //Maid edit
+            profile.BodyType = humanoid.BodyType; // WD EDIT
             profile.Gender = humanoid.Gender.ToString();
             profile.HairName = appearance.HairStyleId;
             profile.HairColor = appearance.HairColor.ToHex();

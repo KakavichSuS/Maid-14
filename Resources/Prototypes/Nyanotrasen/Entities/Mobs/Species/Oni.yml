@@ -81,6 +81,40 @@
     - DoorBumpOpener
     - AnomalyHost
     - Oni
+  # WD EDIT START
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: jumpsuit
+      shoes-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: shoes
+      gloves-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: gloves
+      outerClothing-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: outer
+      hardsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: hardsuit
+      suit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: suit
+  # WD EDIT END
 
 - type: entity
   save: false
@@ -89,3 +123,38 @@
   id: MobOniDummy
   categories: [ HideSpawnMenu ]
   description: A dummy oni meant to be used in character setup.
+  components:
+  # WD EDIT START
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: jumpsuit
+      shoes-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: shoes
+      gloves-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: gloves
+      outerClothing-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: outer
+      hardsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: hardsuit
+      suit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: suit
+  # WD EDIT END

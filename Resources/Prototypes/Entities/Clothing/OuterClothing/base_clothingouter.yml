@@ -320,6 +320,8 @@
     - PlasmamanSafe # EE Plasmeme Change
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: Clothing
+    clothingType: hardsuit # WD EDIT
   - type: DamageOnInteractProtection
     damageProtection:
       flatReductions:
@@ -390,6 +392,8 @@
   - type: Tag
     tags:
     - PlasmamanSafe # EE Plasmeme Change
+  - type: Clothing
+    clothingType: hardsuit # WD EDIT
 
 - type: entity
   parent: ClothingOuterBase

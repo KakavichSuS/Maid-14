@@ -3,9 +3,11 @@
   maps:
   # Standard
   - Bagel
-  - Box
+#  - Box
   - Meta
   - Kettle
   # Maid
   - WonderBox
+  - BoxMaid
+  - TriumphMaid
   - Atom

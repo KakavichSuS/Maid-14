@@ -18,7 +18,10 @@
   name: species-name-rodentia
   roundStart: false # Maid
   prototype: MobRodentia
-  sprites: MobRodentiaSprites
+  # Maid edit start
+  bodyTypes:
+  - RodentiaNormal
+  # Maid edit end
   defaultSkinTone: "#747474"
   markingLimits: MobRodentiaMarkingLimits
   dollPrototype: MobRodentiaDummy
@@ -37,8 +40,11 @@
   maxWidth: 1.10
   # end Goobstation: port EE height/width sliders
 
-- type: speciesBaseSprites
-  id: MobRodentiaSprites
+# Maid edit start
+- type: bodyType
+  id: RodentiaNormal
+  name: body-normal
+# Maid edit end
   sprites:
     Head: MobRodentiaHead
     Hair: MobHumanoidAnyMarking

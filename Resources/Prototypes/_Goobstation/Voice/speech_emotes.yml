@@ -34,7 +34,7 @@
 - type: emote
   id: Trill
   name: chat-emote-name-trill
-  category: Vocal
+  category: Invalid # Maid Edit
   available: false
   icon: _Goobstation/Interface/Emotes/caw.png
   whitelist:
@@ -53,7 +53,7 @@
 - type: emote
   id: Warble
   name: chat-emote-name-warble
-  category: Vocal
+  category: Invalid #Maid edit
   available: false
   icon: _Goobstation/Interface/Emotes/caw.png
   whitelist:
@@ -129,7 +129,7 @@
 - type: emote
   id: Surprised
   name: chat-emote-name-surprised
-  category: Vocal
+  category: Invalid #Maid edit
   icon: _Goobstation/Interface/Emotes/surprised.png
   whitelist:
     components:

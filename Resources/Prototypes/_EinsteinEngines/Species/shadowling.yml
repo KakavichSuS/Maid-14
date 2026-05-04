@@ -3,14 +3,20 @@
   name: species-name-shadowling
   roundStart: false
   prototype: MobShadowling
-  sprites: MobShadowlingSprites
+# Maid edit start
+  bodyTypes:
+  - ShadowlingNormal
+# Maid edit start
   markingLimits: MobHumanMarkingLimits
   dollPrototype: MobShadowlingDummy
   skinColoration: HumanToned
   defaultSkinTone: "#000000"
 
-- type: speciesBaseSprites
-  id: MobShadowlingSprites
+# Maid edit start
+- type: bodyType
+  id: ShadowlingNormal
+  name: body-normal
+# Maid edit end
   sprites:
     Head: MobShadowlingHead
     HeadTop: MobHumanoidAnyMarking

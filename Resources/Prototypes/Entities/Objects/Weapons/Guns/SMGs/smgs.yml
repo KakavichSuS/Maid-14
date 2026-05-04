@@ -234,7 +234,7 @@
       minAngle: 21
       maxAngle: 32
       fireRate: 6
-      burstFireRate: 18
+      burstFireRate: 15 # Maid 18 -> 15
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
       selectedMode: Burst

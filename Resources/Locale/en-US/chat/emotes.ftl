@@ -38,12 +38,15 @@ chat-emote-name-buzztwo = Buzz Two
 chat-emote-name-ping = Ping
 chat-emote-name-sneeze = Sneeze
 chat-emote-name-cough = Cough
-chat-emote-name-catmeow = Cat Meow
-chat-emote-name-cathisses = Cat Hiss
 chat-emote-name-monkeyscreeches = Monkey Screech
 chat-emote-name-robotbeep = Robot
 chat-emote-name-yawn = Yawn
 chat-emote-name-snore = Snore
+chat-emote-name-meow = Meow
+chat-emote-name-mew = Mew
+chat-emote-name-purr = Purr
+chat-emote-name-hisses = Hiss
+chat-emote-name-growl = Growl
 
 # Message
 chat-emote-msg-scream = screams!

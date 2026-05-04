@@ -115,6 +115,11 @@ public sealed partial class ClothingComponent : Component
     /// </summary>
     [DataField]
     public TimeSpan StripDelay = TimeSpan.Zero;
+
+    // WD EDIT START
+    [DataField]
+    public string? ClothingType;
+    // WD EDIT END
 }
 
 public enum ClothingMask : byte

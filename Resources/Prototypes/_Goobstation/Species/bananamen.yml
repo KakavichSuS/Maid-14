@@ -9,13 +9,19 @@
   name: species-name-bananamen
   roundStart: false
   prototype: MobBananaMen
-  sprites: MobBananaMenSprites
+# Maid edit start
+  bodyTypes:
+  - BananaMenNormal
+# Maid edit start
   markingLimits: MobHumanMarkingLimits
   dollPrototype: MobBananaMenDummy
   skinColoration: NoColor
 
-- type: speciesBaseSprites
-  id: MobBananaMenSprites
+# Maid edit start
+- type: bodyType
+  id: BananaMenNormal
+  name: body-normal
+# Maid edit end
   sprites:
     Head: MobBananaMenHead
     Hair: MobHumanoidAnyMarking

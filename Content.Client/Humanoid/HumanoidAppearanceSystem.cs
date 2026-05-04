@@ -21,6 +21,7 @@
 using System.Numerics;
 using Content.Client.DisplacementMap;
 using Content.Shared.CCVar;
+using Content.Shared._White.Humanoid.Prototypes;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -28,6 +29,7 @@ using Content.Shared.Inventory;
 using Content.Shared.Preferences;
 using Robust.Client.GameObjects;
 using Robust.Shared.Configuration;
+using Robust.Shared.Physics;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -96,9 +98,8 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         component.BaseLayers.Clear();
 
         // add default species layers
-        var speciesProto = _prototypeManager.Index(component.Species);
-        var baseSprites = _prototypeManager.Index(speciesProto.SpriteSet);
-        foreach (var (key, id) in baseSprites.Sprites)
+        var bodyTypeProto = _prototypeManager.Index<BodyTypePrototype>(component.BodyType); // WD EDIT
+        foreach (var (key, id) in bodyTypeProto.Sprites) // WD EDIT
         {
             oldLayers.Remove(key);
             if (!component.CustomBaseLayers.ContainsKey(key))
@@ -257,6 +258,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         humanoid.Sex = profile.Sex;
         humanoid.Gender = profile.Gender;
         humanoid.Age = profile.Age;
+        humanoid.BodyType = profile.BodyType; // WD EDIT
         humanoid.Species = profile.Species;
         humanoid.SkinColor = profile.Appearance.SkinColor;
         humanoid.EyeColor = profile.Appearance.EyeColor;
