@@ -257,7 +257,7 @@ namespace Content.Server.Communications
                 || _roundEndSystem.ExpectedShuttleLength is not { } expected)
                 return false;
 
-            return left >= System.TimeSpan.FromSeconds(recallThreshold); // MAID recall rebalance
+            return left >= TimeSpan.FromSeconds(recallThreshold); // MAID recall rebalance
         }
 
         private void OnSelectAlertLevelMessage(EntityUid uid, CommunicationsConsoleComponent comp, CommunicationsConsoleSelectAlertLevelMessage message)
