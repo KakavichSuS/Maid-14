@@ -6,6 +6,8 @@
 using System.Linq;
 using System.Numerics;
 using System.Text;
+using Content.Goobstation.UIKit._Maid.UserInterface.Controls;
+using Content.Goobstation.UIKit._Maid.UserInterface.RichText;
 using Content.Goobstation.UIKit.UserInterface.RichText;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -45,6 +47,15 @@ internal struct CustomRichTextEntry
     public float Margin = 64f;
     public float BoxPadding = 8f;
 
+    //Maid edit start
+    public bool IsFancyBox;
+    public float FirstLineWidth;
+    public float FirstLineHeight;
+
+    public float FancyBoxPadding = 12f;
+    public float NotchOffsetX = 15f;
+    public float NotchInternalPaddingX = 5f;
+    //Maid edit end
     public readonly Dictionary<int, Control>? Controls;
 
     public CustomRichTextEntry(
@@ -60,6 +71,7 @@ internal struct CustomRichTextEntry
         Width = 0;
         LineBreaks = default;
         IsInBox = false;
+        IsFancyBox = false;//Maid edit
         _entManager = entManager;
         _defaultColor = defaultColor ?? new(200, 200, 200);
         _tagsAllowed = tagsAllowed;
@@ -75,6 +87,9 @@ internal struct CustomRichTextEntry
 
             if (node.Name == ExamineBorderTag.TagName)
                 IsInBox = true;
+
+            if (node.Name == FancyBorderTag.TagName)//Maid edit
+                IsFancyBox = true;
 
             if (!tagManager.TryGetMarkupTagHandler(node.Name, _tagsAllowed, out var handler) || !handler.TryCreateControl(node, out var control))
                 continue;
@@ -126,9 +141,16 @@ internal struct CustomRichTextEntry
 
         Height = defaultFont.GetHeight(uiScale);
         LineBreaks.Clear();
+        //Maid edit start
+        var firstLineWidthAccumulator = 0f;
+        var firstLineProcessed = false;
+        Font? firstLineFont = null;
 
-        if (IsInBox && maxSizeX > 0)
-            maxSizeX -= Margin * uiScale;
+        var boxPadding = (IsInBox ? Margin : (IsFancyBox ? FancyBoxPadding * 2 : 0)) * uiScale;
+
+        if (boxPadding > 0 && maxSizeX > 0)
+            maxSizeX -= boxPadding;
+        //Maid edit end
 
         int? breakLine;
         var wordWrap = new CustomWordWrap(maxSizeX);
@@ -148,6 +170,9 @@ internal struct CustomRichTextEntry
             if (!context.Font.TryPeek(out var font))
                 font = defaultFont;
 
+            if (!firstLineProcessed)//Maid edit
+                firstLineFont = font;
+
             // And go over every character.
             foreach (var rune in text.EnumerateRunes())
             {
@@ -160,6 +185,9 @@ internal struct CustomRichTextEntry
 
                 if (ProcessMetric(ref this, metrics, out breakLine))
                     return this;
+
+                if (!firstLineProcessed)//Maid edit
+                    firstLineWidthAccumulator += metrics.Advance;
             }
 
             if (Controls == null || !Controls.TryGetValue(nodeIndex, out var control))
@@ -174,12 +202,24 @@ internal struct CustomRichTextEntry
                 desiredSize.X,
                 desiredSize.Y);
 
+            if (!firstLineProcessed)//Maid edit
+                firstLineWidthAccumulator += controlMetrics.Advance;
+
             if (ProcessMetric(ref this, controlMetrics, out breakLine))
                 return this;
         }
 
         Width = wordWrap.FinalizeText(out breakLine);
         CheckLineBreak(ref this, breakLine);
+
+        //Maid edit start
+        if (IsFancyBox)
+        {
+            FirstLineWidth = firstLineWidthAccumulator > 0 ? firstLineWidthAccumulator : Width;
+            FirstLineHeight = (firstLineFont ?? defaultFont).GetHeight(uiScale);
+            Height -= (int)(FirstLineHeight / 2);
+        }
+        //Maid edit end
 
         return this;
 
@@ -188,6 +228,11 @@ internal struct CustomRichTextEntry
             wordWrap.NextRune(rune, out breakLine, out var breakNewLine, out var skip);
             CheckLineBreak(ref src, breakLine);
             CheckLineBreak(ref src, breakNewLine);
+            //Maid edit start
+            if ((breakLine ?? breakNewLine) is { } && (rune != new Rune('\n') || firstLineWidthAccumulator > 0))
+                firstLineProcessed = true;
+            //Maid edit end
+
             outBreakLine = breakLine;
             return skip;
         }
@@ -196,6 +241,10 @@ internal struct CustomRichTextEntry
         {
             wordWrap.NextMetrics(metrics, out breakLine, out var abort);
             CheckLineBreak(ref src, breakLine);
+
+            if (breakLine.HasValue && !firstLineProcessed)//Maid edit
+                firstLineProcessed = true;
+
             outBreakLine = breakLine;
             return abort;
         }
@@ -253,8 +302,11 @@ internal struct CustomRichTextEntry
                 uiScale,
                 lineHeightScale);
 
+        if (IsFancyBox) //Maid edit
+            FancyBorderRenderer.DrawFancyBorder(screenHandle, bounds, FirstLineWidth, FirstLineHeight);
+
         // Draw background box
-        if (IsInBox)
+        else if (IsInBox)
         {
             if (!context.Font.TryPeek(out var font))
                 font = defaultFont;
@@ -300,8 +352,18 @@ internal struct CustomRichTextEntry
 
         var globalBreakCounter = 0;
         var lineBreakIndex = 0;
-        var baseLine = drawBox.TopLeft + new Vector2(margin - sPixelWidth, defaultFont.GetAscent(uiScale) + verticalOffset);
+        //Maid edit start
+        var normalBaseX = margin - sPixelWidth;
+        var baseLineX = normalBaseX;
+        var frameTopOffset = IsFancyBox ? FirstLineHeight / 2 : 0;
+        var baseLine = drawBox.TopLeft + new Vector2(baseLineX, defaultFont.GetAscent(uiScale) + verticalOffset);
+
+        if (IsFancyBox)
+            baseLine.Y -= (int)frameTopOffset;
+        //Maid edit end
+
         var baseLineBase = baseLine;
+        var baseLineForBreaksY = baseLine.Y;//Maid edit
         var controlYAdvance = 0f;
 
         var screenHandle = (DrawingHandleScreen) handle;
@@ -323,7 +385,22 @@ internal struct CustomRichTextEntry
                 if (lineBreakIndex < LineBreaks.Count &&
                     LineBreaks[lineBreakIndex] == globalBreakCounter)
                 {
-                    baseLine = new Vector2(drawBox.Left + margin - sPixelWidth, baseLine.Y + GetLineHeight(font, uiScale, lineHeightScale) + controlYAdvance);
+                    //Maid edit start
+                    baseLine = (IsFancyBox, lineBreakIndex) switch
+                    {
+                        (true, 0) => new Vector2(
+                            drawBox.Left + margin - sPixelWidth + NotchOffsetX * uiScale + NotchInternalPaddingX * uiScale,
+                            baseLineForBreaksY + GetLineHeight(font, uiScale, lineHeightScale) + controlYAdvance),
+                        (true, > 0) => new Vector2(
+                            drawBox.Left + normalBaseX + FancyBoxPadding,
+                            baseLineForBreaksY + GetLineHeight(font, uiScale, lineHeightScale) + controlYAdvance),
+                        _ => new Vector2(
+                            drawBox.Left + margin - sPixelWidth,
+                            baseLine.Y + GetLineHeight(font, uiScale, lineHeightScale) + controlYAdvance)
+                    };
+
+                    baseLineForBreaksY = baseLine.Y;
+                    //Maid edit end
                     controlYAdvance = 0;
                     lineBreakIndex += 1;
                 }

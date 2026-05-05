@@ -91,6 +91,8 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared;
 using Robust.Shared.Prototypes;
 using Content.Goobstation.Common.CCVar;
+using Content.Shared._Maid.CVars;
+using Content.Shared._Maid.UserInterface;
 
 namespace Content.Client.Options.UI.Tabs;
 
@@ -136,12 +138,22 @@ public sealed partial class MiscTab : Control
             ]);
         // WD EDIT END
 
+        //Maid edit start
+        Control.AddOptionDropDown(
+            MaidCVars.DetailedExamineStyle,
+            DropDownDetailedExamineType,
+            [
+                new ((int)DetailedExamineType.None, Loc.GetString("ui-options-detailed-examine-style-none")),
+                new ((int)DetailedExamineType.Legacy, Loc.GetString("ui-options-detailed-examine-style-legacy")),
+                new ((int)DetailedExamineType.Fancy, Loc.GetString("ui-options-detailed-examine-style-fancy"))
+            ]);
+        //Maid edit end
+
         Control.AddOptionCheckBox(CVars.DiscordEnabled, DiscordRich);
         Control.AddOptionCheckBox(CCVars.ShowOocPatronColor, ShowOocPatronColor);
         Control.AddOptionCheckBox(CCVars.LoocAboveHeadShow, ShowLoocAboveHeadCheckBox);
         Control.AddOptionCheckBox(GoobCVars.LogInChat, LogInChatCheckBox); // WD EDIT
         Control.AddOptionCheckBox(GoobCVars.CoalesceIdenticalMessages, CoalesceIdenticalMessagesCheckBox); // WD EDIT
-        Control.AddOptionCheckBox(GoobCVars.DetailedExamine, DetailedExamineCheckBox); // Goobstation Change
         Control.AddOptionCheckBox(CCVars.HudHeldItemShow, ShowHeldItemCheckBox);
         Control.AddOptionCheckBox(CCVars.CombatModeIndicatorsPointShow, ShowCombatModeIndicatorsCheckBox);
         Control.AddOptionCheckBox(CCVars.OpaqueStorageWindow, OpaqueStorageWindowCheckBox);

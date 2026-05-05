@@ -1,3 +1,4 @@
+using Content.Shared._Maid.UserInterface;
 using Robust.Shared.Configuration;
 
 namespace Content.Shared._Maid.CVars;
@@ -54,12 +55,18 @@ public sealed class MaidCVars
         CVarDef.Create("maid.height_sliders_enabled", false, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
+    ///     Controls detailed examine panel style.
+    /// </summary>
+    public static readonly CVarDef<int> DetailedExamineStyle =
+        CVarDef.Create("maid.detailed_examine_style", (int)DetailedExamineType.Fancy, CVar.ARCHIVE | CVar.REPLICATED | CVar.CLIENT);
 
+    /// <summary>
     ///     Do generate Ert map on round start or not
     /// </summary>
     public static readonly CVarDef<bool> LoadErtMap =
         CVarDef.Create("maid.load_ert_map", true, CVar.SERVERONLY);
 
+    /// <summary>
     ///     Should players get a random weapon on roundend
     /// </summary>
     public static readonly CVarDef<bool> RoundEndWeapons =
