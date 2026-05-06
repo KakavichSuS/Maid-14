@@ -368,8 +368,7 @@ public sealed partial class MindTests
     public async Task TestPlayerCanGhost()
     {
         // Client is needed to spawn session
-        await using var pair = await PoolManager.GetServerClient(new PoolSettings
-            { Connected = true, DummyTicker = false, Fresh = true}); // separate session - Maid
+        await using var pair = await PoolManager.GetServerClient(new PoolSettings { Connected = true, DummyTicker = false });
         var server = pair.Server;
 
         var entMan = server.ResolveDependency<IServerEntityManager>();
