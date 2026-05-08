@@ -171,6 +171,7 @@ namespace Content.Server.Ghost
         [Dependency] private readonly NameModifierSystem _nameMod = default!;
         [Dependency] private readonly GhostVisibilitySystem _ghostVisibility = default!;
         [Dependency] private readonly SharedBodySystem _bodySystem = default!; // Shitmed Change
+        [Dependency] private readonly EntityManager _entityManager = default!;
         private EntityQuery<GhostComponent> _ghostQuery;
         private EntityQuery<PhysicsComponent> _physicsQuery;
 
@@ -372,9 +373,15 @@ namespace Content.Server.Ghost
 
             // MAID BEGIN fix ghost deletion
             _minds.DisableGhostOnShutdown(uid);
+
+            // Don't queue, delete immediately, before server pauses,
+            // otherwise with one client it will delete entity after server unpauses
+            _entityManager.DeleteEntity(uid);
             // MAID END
 
+            /* MAID fix ghost deletion
             QueueDel(uid);
+            */
         }
 
         #endregion
