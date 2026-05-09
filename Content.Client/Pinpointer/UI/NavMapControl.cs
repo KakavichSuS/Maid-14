@@ -372,13 +372,13 @@ public partial class NavMapControl : MapGridControl
             }
 
             var span = lines.Span;
-            for (int i = 0; i < span.Length; i += MaxVertsPerBatch)
+            for (var i = 0; i < span.Length; i += MaxVertsPerBatch)
             {
-                int count = Math.Min(MaxVertsPerBatch, span.Length - i);
+                var count = Math.Min(MaxVertsPerBatch, span.Length - i);
+                DebugTools.Assert(count % 2 == 0, "NavMap line batch has odd vertex count; a line pair would be silently dropped.");
+
                 if (count % 2 != 0)
-                    count--;
-                if (count == 0)
-                    continue;
+                    break;
                 var batch = span.Slice(i, count);
                 handle.DrawPrimitives(DrawPrimitiveTopology.LineList, batch, wallsRGB);
             }
@@ -408,13 +408,14 @@ public partial class NavMapControl : MapGridControl
 
             // MAID EDIT START
             var span = rects.Span;
-            for (int i = 0; i < span.Length; i += MaxVertsPerBatch)
+            for (var i = 0; i < span.Length; i += MaxVertsPerBatch)
             {
-                int count = Math.Min(MaxVertsPerBatch, span.Length - i);
+                var count = Math.Min(MaxVertsPerBatch, span.Length - i);
+                DebugTools.Assert(count % 2 == 0,
+                    "NavMap rect batch has odd vertex count; a line pair would be silently dropped.");
+
                 if (count % 2 != 0)
-                    count--;
-                if (count == 0)
-                    continue;
+                    break;
                 var batch = span.Slice(i, count);
                 handle.DrawPrimitives(DrawPrimitiveTopology.LineList, batch, wallsRGB);
             }
