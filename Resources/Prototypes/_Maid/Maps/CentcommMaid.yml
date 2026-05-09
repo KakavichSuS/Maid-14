@@ -1,5 +1,5 @@
 - type: gameMap
-  id: CentCommMaid
+  id: CentcommMaid
   isGrid: true # Did you know that centcomm is the only "game map" that isn't actually a map? Send help.
   mapName: 'Central Command'
   mapPath: /Maps/_Maid/CentcommMaid.yml
