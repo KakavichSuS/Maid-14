@@ -125,18 +125,6 @@ public sealed class MindSystem : SharedMindSystem
         mind.OwnedEntity = null;
     }
 
-    // MAID BEGIN fix ghost deletion
-    public void DisableGhostOnShutdown(Entity<MindContainerComponent?> container)
-    {
-        var comp = container.Comp ?? CompOrNull<MindContainerComponent>(container);
-
-        if (comp != null)
-        {
-            comp.GhostOnShutdown = false;
-        }
-    }
-    // MAID END
-
     private void OnMindContainerTerminating(EntityUid uid, MindContainerComponent component, ref EntityTerminatingEvent args)
     {
         if (!TryGetMind(uid, out var mindId, out var mind, component))
