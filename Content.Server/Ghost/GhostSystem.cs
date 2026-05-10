@@ -194,7 +194,6 @@ namespace Content.Server.Ghost
             SubscribeLocalEvent<GhostComponent, MindRemovedMessage>(OnMindRemovedMessage);
             SubscribeLocalEvent<GhostComponent, MindUnvisitedMessage>(OnMindUnvisitedMessage);
             SubscribeLocalEvent<GhostComponent, PlayerDetachedEvent>(OnPlayerDetached);
-            SubscribeLocalEvent<GhostComponent, PlayerAttachedEvent>(OnPlayerAttached);
 
             SubscribeLocalEvent<GhostOnMoveComponent, MoveInputEvent>(OnRelayMoveInput);
 
@@ -363,42 +362,8 @@ namespace Content.Server.Ghost
 
         private void OnPlayerDetached(EntityUid uid, GhostComponent component, PlayerDetachedEvent args)
         {
-            // MAID BEGIN fix ghost deletion
-            // Instead of deletion we just hide it, so other players can't see it
-            // And then show it when player reattached
-            SetGhostFullVisibility(uid, false);
-
-            /*
             DeleteEntity(uid);
-            */
-            // MAID END
         }
-
-        // MAID BEGIN fix ghost deletion
-        private void OnPlayerAttached(Entity<GhostComponent> ent, ref PlayerAttachedEvent args)
-        {
-            SetGhostFullVisibility(ent.Owner, true);
-        }
-
-        private void SetGhostFullVisibility(Entity<VisibilityComponent?> ghost, bool visible)
-        {
-            ghost.Comp ??= CompOrNull<VisibilityComponent>(ghost.Owner);
-            if (ghost.Comp is null)
-            {
-                Log.Warning($"Can't make entity {ghost.Owner.Id} visible, VisibilityComponent not present");
-                return;
-            }
-
-            if (visible)
-            {
-                _visibilitySystem.AddLayer(ghost, (int)VisibilityFlags.Ghost);
-            }
-            else
-            {
-                _visibilitySystem.RemoveLayer(ghost, (int)VisibilityFlags.Ghost);
-            }
-        }
-        // MAID END
 
         private void DeleteEntity(EntityUid uid)
         {
