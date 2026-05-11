@@ -194,6 +194,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_Goobstation/Shuttles/retort_engineering.yml",
             "/Maps/_Goobstation/Shuttles/retort_janitorial.yml",
             "/Maps/_Goobstation/Shuttles/retort_cburn.yml",
+            "/Maps/_Maid/CentcommMaid.yml", // Maid
         };
 
         private static readonly string[] GameMaps =
@@ -239,10 +240,14 @@ namespace Content.IntegrationTests.Tests
               "Serpentcrest",
               "Submarine",
             // Goob end
-              "WonderBox", // Maid
-              "Atom", // Maid
+              "WonderBoxMaid", // Maid
+              "AtomMaid", // Maid
               "TriumphMaid", // Maid
-              "BoxMaid" // Maid
+              "BoxMaid", // Maid
+              "BagelMaid", // Maid
+              "KettleMaid", // Maid
+              "ScoupidiaMaid", // Maid
+              "CentcommMaid" // Maid
         };
         // Goobstation edit start, yeah i know, but this is easier and less load than loading protoman or something.
         private static readonly string[] GameMapsInCurrentPool = // plus dev
@@ -285,10 +290,14 @@ namespace Content.IntegrationTests.Tests
               "Saltern",
               "Serpentcrest",
               "Submarine",
-              "WonderBox", // Maid
-              "Atom", // Maid
+              "WonderBoxMaid", // Maid
+              "AtomMaid", // Maid
               "TriumphMaid", // Maid
-              "BoxMaid" // Maid
+              "BoxMaid", // Maid
+              "BagelMaid", // Maid
+              "KettleMaid", // Maid
+              "ScoupidiaMaid", // Maid
+              "CentcommMaid" // Maid
         };
         // Goobstation edit end
 
