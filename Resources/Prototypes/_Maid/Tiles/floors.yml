@@ -63,3 +63,24 @@
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
   tileRipResistance: 60
+
+- type: tile
+  id: FloorWoodBrightLarge
+  name: tiles-wood-bright-large
+  sprite: /Textures/_Maid/Tiles/wood_bright_large.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWoodBright
+  heatCapacity: 10000
+  tileRipResistance: 80
