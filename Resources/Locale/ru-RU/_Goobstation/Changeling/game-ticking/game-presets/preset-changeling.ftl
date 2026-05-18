@@ -6,7 +6,7 @@
 
 changeling-roundend-name = Генокрадов
 objective-issuer-hivemind = [color=orange]Улей[/color]
-objective-issuer-tiger = [color=crimson]Tiger Cooperative[/color]
+objective-issuer-tiger = [color=crimson]Кооператив «Тигр»[/color]
 roundend-prepend-changeling-absorbed-named = [color=white]{ $name }[/color] поглотил всего [color=red]{ $number }[/color] организмов.
 roundend-prepend-changeling-stolen-named = [color=white]{ $name }[/color] извлек всего [color=orange]{ $number }[/color] образцов ДНК.
 roundend-prepend-changeling-absorbed = Кто-то поглотил всего [color=red]{ $number }[/color] организмов.
