@@ -84,3 +84,45 @@
   itemDrop: FloorTileItemWoodBrightLarge
   heatCapacity: 10000
   tileRipResistance: 80
+
+- type: tile
+  id: FloorWoodBrightParquet
+  name: tiles-wood-bright-parquet
+  sprite: /Textures/_Maid/Tiles/wood_bright_parquet_tile.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWoodBrightParquet
+  heatCapacity: 10000
+  tileRipResistance: 80
+
+- type: tile
+  id: FloorWoodParquet
+  name: tiles-wood-parquet
+  sprite: /Textures/_Maid/Tiles/wood_parquet_tile.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWoodParquet
+  heatCapacity: 10000
+  tileRipResistance: 80

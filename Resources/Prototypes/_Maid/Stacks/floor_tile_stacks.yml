@@ -12,6 +12,18 @@
 
 - type: stack
   id: FloorTileWoodBrightLarge
-  name: stack-wood-floor-large
+  name: stack-wood-floor-bright-large
   spawn: FloorTileItemWoodBrightLarge
+  maxCount: 30
+
+- type: stack
+  id: FloorTileWoodBrightParquet
+  name: stack-wood-floor-bright-parquet
+  spawn: FloorTileItemWoodBrightParquet
+  maxCount: 30
+
+- type: stack
+  id: FloorTileWoodParquet
+  name: stack-wood-floor-parquet
+  spawn: FloorTileItemWoodParquet
   maxCount: 30
