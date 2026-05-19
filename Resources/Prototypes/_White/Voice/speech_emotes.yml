@@ -58,7 +58,6 @@
   chatTriggers:
     - smiles
     - улыбается # MAID ru emotes
-    - усмехается # MAID ru emotes
     - лыбится # MAID ru emotes
     - заулыбался # MAID ru emotes
     - заулыбалась # MAID ru emotes
