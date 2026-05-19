@@ -210,3 +210,6 @@
       receiveNukeCodes: true
     - type: StealTarget
       stealGroup: FaxMachineCaptain
+    - type: SpecialRespawnTarget # MAID nuke disk respawn
+      tag: NukeDisk # MAID nuke disk respawn
+      priority: 700 # MAID nuke disk respawn
