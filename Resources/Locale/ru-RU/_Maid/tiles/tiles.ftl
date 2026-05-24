@@ -11,4 +11,3 @@ tiles-wood-bright-parquet = светлый деревянный паркет
 ent-FloorTileItemWoodParquet = деревянный паркет
     .desc = Может послужить неплохим метательным оружием.
 tiles-wood-parquet = деревянный паркет
-
