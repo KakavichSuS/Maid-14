@@ -165,7 +165,7 @@
             - material: WoodPlank
               amount: 2
     - node: woodtileparquet
-      entity: FloorTileItemWoodParquet
+      entity: FloorTileItemWoodParquet1
 #lightwood
 - type: constructionGraph
   id: TileWoodBright

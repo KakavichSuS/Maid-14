@@ -12,5 +12,5 @@ ent-FloorTileItemWoodPattern = деревянный узорачтый пол
     .desc = Может послужить неплохим метательным оружием.
 ent-FloorTileItemWoodLarge = деревянный большой пол
     .desc = Может послужить неплохим метательным оружием.
-ent-FloorTileItemWoodParquet = деревянный паркет
+ent-FloorTileItemWoodParquet1 = деревянный паркет
     .desc = Может послужить неплохим метательным оружием.

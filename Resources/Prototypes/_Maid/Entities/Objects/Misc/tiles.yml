@@ -176,7 +176,7 @@
 - type: entity
   name: wood floor parquet
   parent: FloorTileItemBase
-  id: FloorTileItemWoodParquet
+  id: FloorTileItemWoodParquet1
   components:
   - type: Sprite
     sprite: _Maid/Objects/Tiles/tile.rsi
@@ -191,7 +191,7 @@
   - type: FloorTile
     outputs:
       - Plating
-      - FloorWoodParquet
+      - FloorWoodParquet1
   - type: Stack
     stackType: FloorTileWoodParquet
   - type: Construction

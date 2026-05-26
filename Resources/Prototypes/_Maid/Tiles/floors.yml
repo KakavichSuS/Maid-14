@@ -107,8 +107,8 @@
   tileRipResistance: 80
 
 - type: tile
-  id: FloorWoodParquet
-  name: tiles-wood-parquet
+  id: FloorWoodParquet1
+  name: tiles-wood-parquet1
   sprite: /Textures/_Maid/Tiles/wood_parquet_tile.png
   variants: 4
   placementVariants:
@@ -123,7 +123,7 @@
     collection: FootstepWood
   barestepSounds:
     collection: BarestepWood
-  itemDrop: FloorTileItemWoodParquet
+  itemDrop: FloorTileItemWoodParquet1
   heatCapacity: 10000
   tileRipResistance: 80
 

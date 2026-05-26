@@ -25,7 +25,7 @@
 - type: stack
   id: FloorTileWoodParquet
   name: stack-wood-floor-parquet
-  spawn: FloorTileItemWoodParquet
+  spawn: FloorTileItemWoodParquet1
   maxCount: 30
 
 - type: stack
