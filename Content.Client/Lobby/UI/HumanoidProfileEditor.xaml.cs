@@ -568,6 +568,8 @@ namespace Content.Client.Lobby.UI
 
             #endregion Hair
 
+            // MAID BEGIN remove-spawn-priority
+            /*
             #region SpawnPriority
 
             foreach (var value in Enum.GetValues<SpawnPriorityPreference>())
@@ -582,6 +584,8 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion SpawnPriority
+            */
+            // MAID END remove-spawn-priority
 
             #region Eyes
 
@@ -988,7 +992,8 @@ namespace Content.Client.Lobby.UI
             UpdateBodyTypes(); // WD EDIT
             UpdateGenderControls();
             UpdateSkinColor();
-            UpdateSpawnPriorityControls();
+            // MAID remove-spawn-priority
+            // UpdateSpawnPriorityControls();
             UpdateAgeEdit();
             UpdateEyePickers();
             UpdateSaveButton();
@@ -1818,6 +1823,8 @@ namespace Content.Client.Lobby.UI
             PronounsButton.SelectId((int) Profile.Gender);
         }
 
+        // MAID BEGIN remove-spawn-priority
+        /*
         private void UpdateSpawnPriorityControls()
         {
             if (Profile == null)
@@ -1827,6 +1834,8 @@ namespace Content.Client.Lobby.UI
 
             SpawnPriorityButton.SelectId((int) Profile.SpawnPriority);
         }
+        */
+        // MAID END remove-spawn-priority
 
         // begin Goobstation: port EE height/width sliders
         private void UpdateHeightWidthSliders()
