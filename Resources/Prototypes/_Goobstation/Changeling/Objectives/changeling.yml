@@ -111,7 +111,7 @@
   components:
   - type: StealCondition
     descriptionText: objective-condition-changelingsteal-description
-    verifyMapExistence: false
+    verifyMapExistence: true # MAID steal objective check
 
 - type: entity
   parent: [BaseChangelingSyndicateObjective, BaseKillObjective]
