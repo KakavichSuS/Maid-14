@@ -153,9 +153,9 @@
   canBeAntag: false
   guides: # goobstation
   - SpaceLaw
-  - LegalSOP
+#  - LegalSOP # Maid
   - Security
-  - WardenSOP
+#  - WardenSOP # Maid
   - KravMaga
   access:
   - Security

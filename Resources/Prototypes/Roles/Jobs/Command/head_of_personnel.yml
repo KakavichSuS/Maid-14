@@ -158,9 +158,9 @@
       - Human
   guides: # goobstation
   - Command
-  - Succession
-  - StandardProceduresSOP
-  - HeadOfPersonnelSOP
+#  - Succession # Maid
+#  - StandardProceduresSOP # Maid
+#  - HeadOfPersonnelSOP # Maid
   - Writing
   weight: 20
   startingGear: HoPGear

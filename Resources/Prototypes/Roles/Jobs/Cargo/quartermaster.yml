@@ -153,8 +153,8 @@
   antagAdvantage: 75 # Goobstation
   guides: # goobstation
   - Cargo
-  - QuartermasterSOP
-  - CargoSOP
+#  - QuartermasterSOP # Maid
+#  - CargoSOP # Maid
   - Command
   access:
   - Cargo

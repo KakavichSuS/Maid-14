@@ -156,8 +156,8 @@
   canBeAntag: true # Maid
   guides: # goobstation
   - Medical
-  - ChiefMedicalOfficerSOP
-  - MedicalSOP
+#  - ChiefMedicalOfficerSOP # Maid
+#  - MedicalSOP # Maid
   - Command
   - Chemicals
   - Virology

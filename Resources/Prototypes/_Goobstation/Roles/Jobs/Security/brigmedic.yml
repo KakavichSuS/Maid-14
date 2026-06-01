@@ -21,7 +21,7 @@
   canBeAntag: true # Maid
   guides:
   - MedicalDoctor
-  - BrigmedicSOP
+#  - BrigmedicSOP # Maid
   - Medicine
   access:  # EE parity, make corpsman able function.
   - Security

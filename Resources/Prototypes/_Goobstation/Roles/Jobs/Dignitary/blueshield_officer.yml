@@ -49,9 +49,9 @@
 #      species:
 #      - Felinid
   guides:
-  - BlueshieldOfficerSOP
+#  - BlueshieldOfficerSOP # Maid
   - Command
-  - Succession
+#  - Succession # Maid
   weight: 20
   startingGear: BlueshieldOfficerGear
   icon: "JobIconBlueshield"

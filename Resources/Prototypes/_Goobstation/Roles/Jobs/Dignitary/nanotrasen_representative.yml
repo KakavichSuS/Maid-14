@@ -116,8 +116,8 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   guides:
-  - NanotrasenRepSOP
-  - SOP
+#  - NanotrasenRepSOP # Maid
+#  - SOP # Maid
   - SpaceLaw
   - Writing
   access:

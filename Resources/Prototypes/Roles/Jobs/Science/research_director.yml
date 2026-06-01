@@ -158,8 +158,8 @@
   guides: # goobstation
   - Science
   - Command
-  - ResearchDirectorSOP
-  - ScienceSOP
+#  - ResearchDirectorSOP # Maid
+#  - ScienceSOP # Maid
   access:
   - Research
   - Command

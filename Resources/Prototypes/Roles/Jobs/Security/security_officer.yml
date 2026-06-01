@@ -103,10 +103,10 @@
   canBeAntag: false
   guides: # goobstation
   - Security
-  - LegalSOP
-  - OfficerCadetSOP
+#  - LegalSOP # Maid
+#  - OfficerCadetSOP # Maid
   - CorporateJudo
-  - AlertLevels
+#  - AlertLevels # Maid
   access:
   - Security
   - Brig

@@ -169,11 +169,11 @@
   guides: # goobstation
   - Security
   - SpaceLaw
-  - LegalSOP
+#  - LegalSOP # Maid
   - Command
-  - HeadOfSecuritySOP
-  - SecuritySOP
-  - AlertLevels
+#  - HeadOfSecuritySOP # Maid
+#  - SecuritySOP # Maid
+#  - AlertLevels # Maid
   access:
   - HeadOfSecurity
   - Command

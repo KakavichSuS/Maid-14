@@ -157,10 +157,10 @@
   antagAdvantage: 75 # Goobstation
   guides: # goobstation
   - Engineering
-  - ChiefEngineerSOP
-  - EngineeringSOP
+#  - ChiefEngineerSOP # Maid
+#  - EngineeringSOP # Maid
   - Command
-  - EmergenciesSOP
+#  - EmergenciesSOP # Maid
   access:
   - Maintenance
   - Engineering
