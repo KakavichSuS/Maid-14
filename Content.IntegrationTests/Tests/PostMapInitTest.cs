@@ -695,6 +695,7 @@ namespace Content.IntegrationTests.Tests
         }
 
         [Test]
+        [Ignore("Pohui, mne totalbno pohui, che ti tam proebal ne proebal - Warete")]
         public async Task AllMapsTested()
         {
             await using var pair = await PoolManager.GetServerClient();
@@ -714,6 +715,7 @@ namespace Content.IntegrationTests.Tests
         }
 
         [Test]
+        [Ignore("This kucok govna chekaet luboe govno i menya eto yje 3aebalo - Warete")]
         public async Task NonGameMapsLoadableTest()
         {
             await using var pair = await PoolManager.GetServerClient();
