@@ -480,7 +480,14 @@ public sealed partial class ShuttleSystem
         // Just so we don't clip
         if (fromMapUid != null && TryComp(comp.StartupStream, out AudioComponent? startupAudio))
         {
-            var clippedAudio = _audio.PlayStatic(_startupSound, Filter.Broadcast(),
+            // MAID BEGIN custom arrivals sound
+            var startupSound = TryComp(uid, out CustomFTLSoundComponent? customSoundComponent)
+                               && customSoundComponent.StartupSound is not null
+                ? customSoundComponent.StartupSound
+                : _startupSound;
+            // MAID END
+
+            var clippedAudio = _audio.PlayStatic(startupSound, Filter.Broadcast(), // MAID custom arrivals sound
                 new EntityCoordinates(fromMapUid.Value, _mapSystem.GetGridPosition(entity.Owner)), true, startupAudio.Params);
 
             _audio.SetPlaybackPosition(clippedAudio, entity.Comp1.StartupTime);
