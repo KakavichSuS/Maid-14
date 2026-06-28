@@ -231,11 +231,11 @@ ghost-role-information-pirate-captain-name = Капитан космически
 ghost-role-information-pirate-captain-description = Агх, дружище! Ты здесь главный, и тебе нужно разработать план, как заполучить эту сочную добычу с помощью крючка или мошенничества. Только постарайтесь избегать службы безопасности и утилизаторов!
 ghost-role-information-disaster-victim-name = Жертва катастрофы
 ghost-role-information-disaster-victim-description = Вы спаслись на спасательной капсуле с другой станции, которую постигла ужасная участь. Возможно, вас найдут и спасут.
-ghost-role-information-pirate-irs-name = Космический пират
-ghost-role-information-pirate-irs-description = Конфискуйте ценные активы станции. Слушайте Капитана пиратов. Арестуйте Капитана станции за уклонение от уплаты налогов.
-ghost-role-information-pirate-irs-captain-name = Капитан космических пиратов
-ghost-role-information-pirate-irs-captain-description = Руководите своей командой. Арестуйте капитана станции за уклонение от уплаты налогов.
-ghost-role-information-pirate-irs-rules = Вы — [color=red][bold]командный антагонист[/bold][/color] вместе с остальными пиратами.
+ghost-role-information-pirate-irs-name = Space Pirate
+ghost-role-information-pirate-irs-description = Confiscate the station's valuable assets. Arrest the captain for tax evasion.
+ghost-role-information-pirate-irs-captain-name = Space Pirate Captain
+ghost-role-information-pirate-irs-captain-description = Direct the plundering process. Arrest the captain for tax evasion.
+ghost-role-information-pirate-irs-rules = You are a [color=red][bold]Team Antagonist[/bold][/color] with the other pirates.
 ghost-role-information-syndie-disaster-victim-name = Жертва катастрофы из Синдиката
 ghost-role-information-syndie-disaster-victim-description = Вы - обычный ассистент со станции Синдиката. К несчастью, спасательная капсула закинула вас во вражеский сектор...
 ghost-role-information-artifact-name = Разумный артефакт
