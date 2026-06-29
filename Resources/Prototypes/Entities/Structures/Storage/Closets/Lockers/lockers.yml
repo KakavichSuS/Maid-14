@@ -135,6 +135,9 @@
     stateDoorClosed: cap_door
   - type: AccessReader
     access: [["Captain"]]
+  - type: SpecialRespawnTarget # MAID nuke disk respawn
+    tag: NukeDisk # MAID nuke disk respawn
+    priority: 1000 # MAID nuke disk respawn
 
 - type: entity
   id: LockerHeadOfPersonnel

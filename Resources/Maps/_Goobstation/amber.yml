@@ -131422,8 +131422,6 @@ entities:
       parent: 2
     - type: RadioSpeaker
       enabled: False
-    - type: StationRadioReceiver
-      active: False
     missingComponents:
     - ActiveRadio
   - uid: 19457

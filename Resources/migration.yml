@@ -1060,7 +1060,6 @@ CrateSecurityTrackingMindshieldImplants: null
 ContrabandDetectorCircuitboard: null
 
 ATM: null
-# AuthPanel: null // Maid - AuthPanel Re-add
 WeaponEgun: null
 WeaponPoweredCrossbowUnfinished: null
 SuperSynthesizerInstrumentDerderiot: null
@@ -1090,10 +1089,39 @@ DVSmartFridgeMedical: SmartFridgeMedical
 # 2026-01-10 Goobstation Change Mapped Chem to Energy Chem by default
 ChemDispenser: EnergyChemDispenser
 
-# 2026-06-01 Maid
+# 2026-06-01 Maid Upstream
 AirlockJournalismGlassLocked: AirlockServiceGlassLocked
 AirlockMaintJournalismLocked: AirlockMaintServiceLocked
 AirlockJournalismLocked: AirlockServiceLocked
 CrateRadioStationAds: null
 CrateRadioStationVinyls: null
 SpawnPointRadioHost: null
+DefaultStationBeaconRadioStation: null
+StationRadioReceiver: null
+ComputerNTRTasks: null
+StationRadioRig: null
+StationRadioServer: null
+TapeDeck: null
+
+VinylPlayer: null
+VinylSleeveDevil: null
+VinylSleeveNanoYork: null
+VinylSleeveRedSun: null
+VinylSleeveDJTider: null
+VinylSleeveLavaLand: null
+VinylSleeveStation13: null
+VinylSleeveStation14: null
+VinylSleeveHockey: null
+VinylSleeveJanitor: null
+VinylSleeveNukeDisk: null
+VinylSleevePda: null
+VinylSleevePeace: null
+VinylSleeveBeige: null
+VinylSleeveBlack: null
+VinylSleeveBlockyCraft: null
+VinylSleeveHeisenbee: null
+
+GambamovCircuitBoard: null
+BulletDislippler: null
+ShrapnelPayload: null
+LockerDetectiveFilledHardsuit: LockerDetectiveFilled

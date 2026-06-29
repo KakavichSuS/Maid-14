@@ -1139,12 +1139,12 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         ICommonSession? session) // Goobstation - Shove Rework
     {
         if (!ev.Target.HasValue)
-            return false;
+            return true; // MAID shove target
 
         var target = GetEntity(ev.Target.Value);
 
         if (Deleted(target))
-            return false;
+            return true; // MAID shove target
 
         if (user == target) // Goobstation
         {
@@ -1177,7 +1177,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
             return true;
 
         if (!TryComp<PhysicsComponent>(target, out var targetPhysicsComponent))
-            return false;
+            return true;  // MAID shove target
 
         if (!TryComp<HandsComponent>(target, out var targetHandsComponent))
         {
