@@ -370,7 +370,7 @@ Entries:
     - type: Add
       message: Плата автодока в Медицинский ТехФаб.
     - type: Remove
-      message: НаноДела из КПК.
+      message: НаноДела из ПДА.
     - type: Remove
       message: Рост тараканомоли от еды.
     - type: Remove
